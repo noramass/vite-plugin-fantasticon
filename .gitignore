@@ -1,0 +1,29 @@
+
+# Operating Systems
+.DS_Store
+**/Thumbs.db
+
+# NPM
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build Targets
+/dist
+
+# Local env files
+.env.local
+.env.*.local
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Jest test coverage
+/coverage

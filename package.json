@@ -1,0 +1,51 @@
+{
+  "name": "vite-plugin-fantasticon",
+  "version": "1.4.0",
+  "description": "build icon fonts with fantasticon for vite",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "since": 2022,
+  "scripts": {
+    "build": "tsup src/index.ts",
+    "lint": "eslint --ignore-path .gitignore --ext .ts .",
+    "lint:fix": "eslint --ignore-path .gitignore --ext .ts . --fix"
+  },
+  "keywords": [
+    "vite-plugin",
+    "fantasticon",
+    "icon",
+    "font"
+  ],
+  "dependencies": {
+    "fantasticon": "*"
+  },
+  "peerDependencies": {
+    "vite": "*"
+  },
+  "peerDependenciesMeta": {
+    "vite": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.3",
+    "tslib": "^2.4.1",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-tsconfig-paths": "^4.0.3"
+  },
+  "author": "Nora Reichwald <nora@reichwald.me>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
