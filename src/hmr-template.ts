@@ -12,13 +12,14 @@ import.${"meta"}.hot && import.${"meta"}.hot.on("${event}", () => {
 
 export const hmrLinkTag = (
   config: RunnerOptions,
+  base: string,
   id: string
 ): HtmlTagDescriptor => ({
   tag: "link",
   attrs: {
     rel: "stylesheet",
     type: "text/css",
-    href: `/${assetPath(config, "css" as any)}?${Date.now()}`,
+    href: `${base}${assetPath(config, "css" as any)}?${Date.now()}`,
     "data-id": id,
   },
   injectTo: "head",

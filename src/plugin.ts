@@ -20,15 +20,19 @@ export function fantasticon(options?: FantasticonOptions): PluginOption {
   const name = `fantasticon:${config.name}`;
   const virtual = `\0${name}`;
   const updateEvent = `${name}:update`;
+  let base = "/";
 
   let ws: WebSocketServer | undefined = undefined;
 
   function transformIndexHtml(html: string) {
-    return { html, tags: [hmrLinkTag(config, name)] };
+    return { html, tags: [hmrLinkTag(config, base, name)] };
   }
 
   return {
     name,
+    configResolved(config) {
+      base = config.base;
+    },
     async buildStart() {
       builder.watch(() => ws, updateEvent);
       await builder.build();
