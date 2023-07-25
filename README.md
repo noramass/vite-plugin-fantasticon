@@ -38,10 +38,10 @@ export default defineConfig({
 });
 ```
 
-for hmr to work simply import "fontasticon:<font name>" somewhere in your code
+for hmr to work simply import "fantasticon:<font name>" somewhere in your code
 ```typescript
-import "fontasticon:icons";
-import "fontasticon:my-other-font";
+import "fantasticon:icons";
+import "fantasticon:my-other-font";
 ```
 
 default options:
